@@ -3,6 +3,7 @@ const router = require("express")();
 
 
 router.get("/", authController.home_page_get);
+router.get("/signup", authController.signup_get);
 
 
 module.exports = router;

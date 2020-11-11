@@ -1,0 +1,41 @@
+<%- include("./partials/header") %>
+
+<nav class="navbar bg-light">
+    <a class="navbar-brand ml-4" id="nav-logo" href="/">
+        S
+    </a>
+</nav>
+
+<h1 class="text-center">Sign Up</h1>
+
+<form  class="signup-form" action="">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" class="form-control" id="">
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="form-control" id="">
+    </div>
+
+    <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" name="confirm-password" class="form-control" id="">
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="submit" class="btn btn-info">
+    </div>
+    
+    <small class="text-muted">Already have an account, <a href="/login">Login</a></small>
+</form>
+
+
+
+<%- include("./partials/footer") %>

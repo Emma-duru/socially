@@ -8,16 +8,21 @@ body {
     font-size: 5em;
 }
 
+#nav-logo {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+}
+
+.navbar {
+    border-bottom: 0;
+    padding: 10px;
+}
+
 .home-container {
-    padding-top: 12%;
-    height: 95vh;
+    padding: 8%;
 }
 
-.btn {
-    font-size: 1.2em;
-}
-
-.btn-container {
-    max-width: 200px;
+.signup-form {
+    width: 40%;
     margin: auto;
 }
