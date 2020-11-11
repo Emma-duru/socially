@@ -1,0 +1,23 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+#logo {
+    font-family: 'Lobster', cursive;
+    font-size: 5em;
+}
+
+.home-container {
+    padding-top: 12%;
+    height: 95vh;
+}
+
+.btn {
+    font-size: 1.2em;
+}
+
+.btn-container {
+    max-width: 200px;
+    margin: auto;
+}
