@@ -5,6 +5,17 @@ const jwt = require("jsonwebtoken");
 const handleError = (err) => {
     const errors = { username: "", email: "", password: "" };
 
+    // Login Functions
+    // Incorrect Username
+    if (err.message === "Incorrect username") {
+        errors.username = "The username is incorrect";
+    }
+
+    // Incorrect Password
+    if (err.message === "Incorrect password") {
+        errors.password = "The password is incorrect";
+    }
+
     // check for duplication errors
     if(err.code === 11000) {
         const errKeys = Object.keys(err.keyPattern);
@@ -66,7 +77,21 @@ module.exports.login_get = (req, res) => {
     res.render("login");
 }
 
-module.exports.login_post = (req, res) => {
-    res.redirect("/dashboard")
+module.exports.login_post = async (req, res) => {
+    const { username, password } = req.body;
+
+    try {
+        const user = await User.login(username,  password);
+        const token = createToken(user._id);
+        res.cookie("jwt", token, {
+            maxAge: maxAge * 1000,
+            httpOnly: true
+        });
+        res.status(200).json({ user: user._id });
+    }
+    catch (err){
+        const errors = handleError(err);
+        res.status(404).json({ errors });
+    }
 }
 

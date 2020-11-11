@@ -8,15 +8,17 @@
 
 <h1 class="text-center pt-3">Log in</h1>
 
-<form  class="signup-form" action="/login" method="POST">
+<form  class="signup-form">
     <div class="form-group">
-        <label for="email">Email</label>
-        <input type="text" name="email" class="form-control" id="">
+        <label for="username">Username</label>
+        <input type="text" name="username" class="form-control">
+        <small class="text-danger username error"></small>
     </div>
 
     <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" name="password" class="form-control" id="">
+        <input type="password" name="password" class="form-control">
+        <small class="text-danger password error"></small>
     </div>
 
     <div class="form-group">
@@ -26,6 +28,7 @@
     <small class="text-muted">Don't have an account? <a href="/signup">Sign up</a></small>
 </form>
 
+<script src="javascript/login.js"></script>
 
 
 <%- include("./partials/footer") %>
