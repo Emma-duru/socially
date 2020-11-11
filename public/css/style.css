@@ -13,9 +13,13 @@ body {
     font-size: 3em;
 }
 
-.navbar {
+.home-navbar {
     border-bottom: 0;
     padding: 10px;
+}
+
+.navbar {
+    padding: 5px;
 }
 
 .home-container {
